@@ -26,7 +26,7 @@ const commonQuestions = [
         field: "project"
     },
     {
-        text: "What is today's date?",
+        text: "What is today's date? Please say the month, day, and year.",
         field: "date"
     },
     {
@@ -38,7 +38,7 @@ const commonQuestions = [
         field: "stNumber"
     },
     {
-        text: "What is the location? Include meters and direction from the S T number.",
+        text: "What is the location? Please include the distance in meters and the direction from the S T number.",
         field: "location"
     }
 ];
@@ -86,11 +86,11 @@ const unitLevelQuestions = [
         field: "siteName"
     },
     {
-        text: "What is the unit designation?",
+        text: "What is the unit designation? Please say the unit number or identifier.",
         field: "unitDesignation"
     },
     {
-        text: "What is the unit size?",
+        text: "What is the unit size? Please specify the dimensions in meters.",
         field: "unitSize"
     },
     {
@@ -214,7 +214,7 @@ async function askQuestion() {
         
         // FIXED: Wait for speaking to finish, THEN wait additional time before listening
         await speak(formTypeQuestion.text);
-        await new Promise(resolve => setTimeout(resolve, 500));
+        await new Promise(resolve => setTimeout(resolve, 1500));
         
         statusDiv.textContent = "Listening for your answer...";
         currentQuestionDiv.classList.add('listening');
@@ -247,7 +247,7 @@ async function askQuestion() {
     
     // FIXED: Wait for speaking to finish, THEN wait additional time before listening
     await speak(question.text);
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 1500));
     
     // Start listening for answer
     statusDiv.textContent = "Listening for your answer...";
