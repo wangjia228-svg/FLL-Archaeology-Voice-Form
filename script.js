@@ -203,6 +203,9 @@ async function askQuestion() {
         
         await speak(formTypeQuestion.text);
         
+        // Wait a moment after speaking before listening
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
         statusDiv.textContent = "Listening for your answer...";
         currentQuestionDiv.classList.add('listening');
         
@@ -234,6 +237,9 @@ async function askQuestion() {
     
     // Speak the question
     await speak(question.text);
+    
+    // Wait a moment after speaking before listening
+    await new Promise(resolve => setTimeout(resolve, 500));
     
     // Start listening for answer
     statusDiv.textContent = "Listening for your answer...";
