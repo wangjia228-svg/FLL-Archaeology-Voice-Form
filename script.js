@@ -344,7 +344,7 @@ startBtn.addEventListener('click', async () => {
     saveBtn.disabled = true;
     
     if (currentQuestionIndex === 0) {
-        await speak("Starting archaeology field form. I will ask you eight questions. Please answer each question clearly.");
+        await speak("Starting archaeology field form.");
         await new Promise(resolve => setTimeout(resolve, 500));
     }
     
@@ -505,9 +505,3 @@ displaySavedForms();
 // Update initial progress text
 progressDiv.textContent = "Selecting form type...";
 
-// Speak welcome message when page loads
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        speak("Welcome to the Archaeology Field Form. Press Start Voice Form when you are ready to begin.");
-    }, 1000);
-});
