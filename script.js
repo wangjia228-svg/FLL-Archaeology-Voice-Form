@@ -157,7 +157,7 @@ const savedFormsDiv = document.getElementById('savedForms');
 function speak(text) {
     return new Promise((resolve) => {
         const utterance = new SpeechSynthesisUtterance(text);
-        utterance.rate = 1.2;
+        utterance.rate = 1.5;
         utterance.pitch = 1;
         utterance.volume = 1;
         
