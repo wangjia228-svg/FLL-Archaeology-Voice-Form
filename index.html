@@ -15,7 +15,7 @@
 
         <div class="status-bar">
             <div id="status" class="status">Ready to start</div>
-            <div id="progress" class="progress">Question 0 of 8</div>
+            <div id="progress" class="progress">Selecting form type...</div>
         </div>
 
         <div class="controls">
@@ -35,42 +35,136 @@
             <h2>Form Data:</h2>
             <form id="archaeologyForm">
                 <div class="form-group">
-                    <label>Site Name/ID:</label>
+                    <label>Form Type:</label>
+                    <input type="text" id="formType" readonly>
+                </div>
+
+                <!-- Common Fields -->
+                <div class="form-group">
+                    <label>Project:</label>
+                    <input type="text" id="project" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Date:</label>
+                    <input type="text" id="date" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Recorders:</label>
+                    <input type="text" id="recorders" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>ST #:</label>
+                    <input type="text" id="stNumber" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Location:</label>
+                    <input type="text" id="location" readonly>
+                </div>
+
+                <!-- Shovel Test Fields -->
+                <div class="form-group">
+                    <label>Surrounding Vegetation:</label>
+                    <input type="text" id="surroundingVegetation" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Stratum I Depth:</label>
+                    <input type="text" id="stratum1Depth" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Stratum I Materials:</label>
+                    <input type="text" id="stratum1Materials" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Stratum I Munsell:</label>
+                    <input type="text" id="stratum1Munsell" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Stratum II Depth:</label>
+                    <input type="text" id="stratum2Depth" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Stratum II Materials:</label>
+                    <input type="text" id="stratum2Materials" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Stratum II Munsell:</label>
+                    <input type="text" id="stratum2Munsell" readonly>
+                </div>
+
+                <!-- Unit Level Record Fields -->
+                <div class="form-group">
+                    <label>Site Name:</label>
                     <input type="text" id="siteName" readonly>
                 </div>
 
                 <div class="form-group">
-                    <label>Artifact Type:</label>
-                    <input type="text" id="artifactType" readonly>
+                    <label>Unit Designation:</label>
+                    <input type="text" id="unitDesignation" readonly>
                 </div>
 
                 <div class="form-group">
-                    <label>Material Composition:</label>
-                    <input type="text" id="material" readonly>
+                    <label>Unit Size:</label>
+                    <input type="text" id="unitSize" readonly>
                 </div>
 
                 <div class="form-group">
-                    <label>Depth (cm):</label>
+                    <label>Grid Coordinates:</label>
+                    <input type="text" id="gridCoordinates" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Datum Location/Elevation:</label>
+                    <input type="text" id="datumLocation" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Level:</label>
+                    <input type="text" id="level" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Depth:</label>
                     <input type="text" id="depth" readonly>
                 </div>
 
                 <div class="form-group">
-                    <label>GPS Coordinates:</label>
-                    <input type="text" id="coordinates" readonly>
+                    <label>Context:</label>
+                    <input type="text" id="context" readonly>
                 </div>
 
                 <div class="form-group">
-                    <label>Condition Assessment:</label>
-                    <input type="text" id="condition" readonly>
+                    <label>Stratum Designation:</label>
+                    <input type="text" id="stratumDesignation" readonly>
                 </div>
 
                 <div class="form-group">
-                    <label>Associated Finds:</label>
-                    <input type="text" id="associatedFinds" readonly>
+                    <label>Sediment Description:</label>
+                    <input type="text" id="sedimentDescription" readonly>
                 </div>
 
                 <div class="form-group">
-                    <label>Additional Notes:</label>
+                    <label>Artifacts Plotted:</label>
+                    <input type="text" id="artifactsPlotted" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Artifact Description:</label>
+                    <input type="text" id="artifactDescription" readonly>
+                </div>
+
+                <!-- Common Notes Field -->
+                <div class="form-group">
+                    <label>Notes:</label>
                     <textarea id="notes" rows="3" readonly></textarea>
                 </div>
             </form>
