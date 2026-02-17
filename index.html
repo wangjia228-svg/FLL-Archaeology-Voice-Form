@@ -34,12 +34,15 @@
         <div class="form-section">
             <h2>Form Data:</h2>
             <form id="archaeologyForm">
+                <!-- Form Type -->
                 <div class="form-group">
                     <label>Form Type:</label>
                     <input type="text" id="formType" readonly>
                 </div>
 
-                <!-- Common Fields -->
+                <!-- Common Fields Section -->
+                <h3 style="margin-top: 20px; color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 5px;">General Information</h3>
+                
                 <div class="form-group">
                     <label>Project:</label>
                     <input type="text" id="project" readonly>
@@ -65,104 +68,118 @@
                     <input type="text" id="location" readonly>
                 </div>
 
-                <!-- Shovel Test Fields -->
-                <div class="form-group">
-                    <label>Surrounding Vegetation:</label>
-                    <input type="text" id="surroundingVegetation" readonly>
+                <!-- Shovel Test Fields Section -->
+                <div id="shovelTestSection" style="display: none;">
+                    <h3 style="margin-top: 25px; color: #27ae60; border-bottom: 2px solid #27ae60; padding-bottom: 5px;">Shovel Test Data</h3>
+                    
+                    <div class="form-group">
+                        <label>Surrounding Vegetation:</label>
+                        <input type="text" id="surroundingVegetation" readonly>
+                    </div>
+
+                    <h4 style="margin-top: 15px; color: #555;">Stratum I</h4>
+                    <div class="form-group">
+                        <label>Depth:</label>
+                        <input type="text" id="stratum1Depth" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Materials Recovered:</label>
+                        <input type="text" id="stratum1Materials" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Munsell Color:</label>
+                        <input type="text" id="stratum1Munsell" readonly>
+                    </div>
+
+                    <h4 style="margin-top: 15px; color: #555;">Stratum II</h4>
+                    <div class="form-group">
+                        <label>Depth:</label>
+                        <input type="text" id="stratum2Depth" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Materials Recovered:</label>
+                        <input type="text" id="stratum2Materials" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Munsell Color:</label>
+                        <input type="text" id="stratum2Munsell" readonly>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Stratum I Depth:</label>
-                    <input type="text" id="stratum1Depth" readonly>
-                </div>
+                <!-- Unit Level Record Fields Section -->
+                <div id="unitLevelSection" style="display: none;">
+                    <h3 style="margin-top: 25px; color: #e67e22; border-bottom: 2px solid #e67e22; padding-bottom: 5px;">Unit Level Record Data</h3>
+                    
+                    <h4 style="margin-top: 15px; color: #555;">Context Information</h4>
+                    <div class="form-group">
+                        <label>Site Name:</label>
+                        <input type="text" id="siteName" readonly>
+                    </div>
 
-                <div class="form-group">
-                    <label>Stratum I Materials:</label>
-                    <input type="text" id="stratum1Materials" readonly>
-                </div>
+                    <div class="form-group">
+                        <label>Unit Designation:</label>
+                        <input type="text" id="unitDesignation" readonly>
+                    </div>
 
-                <div class="form-group">
-                    <label>Stratum I Munsell:</label>
-                    <input type="text" id="stratum1Munsell" readonly>
-                </div>
+                    <div class="form-group">
+                        <label>Unit Size:</label>
+                        <input type="text" id="unitSize" readonly>
+                    </div>
 
-                <div class="form-group">
-                    <label>Stratum II Depth:</label>
-                    <input type="text" id="stratum2Depth" readonly>
-                </div>
+                    <div class="form-group">
+                        <label>Grid Coordinates:</label>
+                        <input type="text" id="gridCoordinates" readonly>
+                    </div>
 
-                <div class="form-group">
-                    <label>Stratum II Materials:</label>
-                    <input type="text" id="stratum2Materials" readonly>
-                </div>
+                    <div class="form-group">
+                        <label>Datum Location/Elevation:</label>
+                        <input type="text" id="datumLocation" readonly>
+                    </div>
 
-                <div class="form-group">
-                    <label>Stratum II Munsell:</label>
-                    <input type="text" id="stratum2Munsell" readonly>
-                </div>
+                    <div class="form-group">
+                        <label>Context of Unit Location:</label>
+                        <input type="text" id="context" readonly>
+                    </div>
 
-                <!-- Unit Level Record Fields -->
-                <div class="form-group">
-                    <label>Site Name:</label>
-                    <input type="text" id="siteName" readonly>
-                </div>
+                    <h4 style="margin-top: 15px; color: #555;">Excavation Details</h4>
+                    <div class="form-group">
+                        <label>Level:</label>
+                        <input type="text" id="level" readonly>
+                    </div>
 
-                <div class="form-group">
-                    <label>Unit Designation:</label>
-                    <input type="text" id="unitDesignation" readonly>
-                </div>
+                    <div class="form-group">
+                        <label>Depth:</label>
+                        <input type="text" id="depth" readonly>
+                    </div>
 
-                <div class="form-group">
-                    <label>Unit Size:</label>
-                    <input type="text" id="unitSize" readonly>
-                </div>
+                    <div class="form-group">
+                        <label>Stratum Designation:</label>
+                        <input type="text" id="stratumDesignation" readonly>
+                    </div>
 
-                <div class="form-group">
-                    <label>Grid Coordinates:</label>
-                    <input type="text" id="gridCoordinates" readonly>
-                </div>
+                    <div class="form-group">
+                        <label>Sediment Description:</label>
+                        <input type="text" id="sedimentDescription" readonly>
+                    </div>
 
-                <div class="form-group">
-                    <label>Datum Location/Elevation:</label>
-                    <input type="text" id="datumLocation" readonly>
-                </div>
+                    <h4 style="margin-top: 15px; color: #555;">Materials Recovered</h4>
+                    <div class="form-group">
+                        <label>Artifacts Plotted (FS #, description):</label>
+                        <input type="text" id="artifactsPlotted" readonly>
+                    </div>
 
-                <div class="form-group">
-                    <label>Level:</label>
-                    <input type="text" id="level" readonly>
-                </div>
-
-                <div class="form-group">
-                    <label>Depth:</label>
-                    <input type="text" id="depth" readonly>
-                </div>
-
-                <div class="form-group">
-                    <label>Context:</label>
-                    <input type="text" id="context" readonly>
-                </div>
-
-                <div class="form-group">
-                    <label>Stratum Designation:</label>
-                    <input type="text" id="stratumDesignation" readonly>
-                </div>
-
-                <div class="form-group">
-                    <label>Sediment Description:</label>
-                    <input type="text" id="sedimentDescription" readonly>
-                </div>
-
-                <div class="form-group">
-                    <label>Artifacts Plotted:</label>
-                    <input type="text" id="artifactsPlotted" readonly>
-                </div>
-
-                <div class="form-group">
-                    <label>Artifact Description:</label>
-                    <input type="text" id="artifactDescription" readonly>
+                    <div class="form-group">
+                        <label>Artifact Description (type, count, density):</label>
+                        <input type="text" id="artifactDescription" readonly>
+                    </div>
                 </div>
 
                 <!-- Common Notes Field -->
+                <h3 style="margin-top: 25px; color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 5px;">Additional Notes</h3>
                 <div class="form-group">
                     <label>Notes:</label>
                     <textarea id="notes" rows="3" readonly></textarea>
