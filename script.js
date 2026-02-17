@@ -192,6 +192,17 @@ function fillField(fieldId, value) {
     field.value = value;
     field.classList.add('filled');
     formData[fieldId] = value;
+    
+    // Show the appropriate section when form type is filled
+    if (fieldId === 'formType') {
+        if (value === 'Shovel Test') {
+            document.getElementById('shovelTestSection').style.display = 'block';
+            document.getElementById('unitLevelSection').style.display = 'none';
+        } else if (value === 'Unit Level Record') {
+            document.getElementById('shovelTestSection').style.display = 'none';
+            document.getElementById('unitLevelSection').style.display = 'block';
+        }
+    }
 }
 
 // Ask current question
@@ -201,9 +212,8 @@ async function askQuestion() {
         updateUI();
         statusDiv.textContent = "Speaking question...";
         
+        // FIXED: Wait for speaking to finish, THEN wait additional time before listening
         await speak(formTypeQuestion.text);
-        
-        // Wait a moment after speaking before listening
         await new Promise(resolve => setTimeout(resolve, 500));
         
         statusDiv.textContent = "Listening for your answer...";
@@ -235,10 +245,8 @@ async function askQuestion() {
     updateUI();
     statusDiv.textContent = "Speaking question...";
     
-    // Speak the question
+    // FIXED: Wait for speaking to finish, THEN wait additional time before listening
     await speak(question.text);
-    
-    // Wait a moment after speaking before listening
     await new Promise(resolve => setTimeout(resolve, 500));
     
     // Start listening for answer
@@ -265,11 +273,13 @@ recognition.onresult = (event) => {
         const answerLower = answer.toLowerCase();
         
         if (answerLower.includes('shovel') || answerLower.includes('test')) {
-            formData.formType = 'Shovel Test';
+            // FIXED: Actually fill the form type field
+            fillField('formType', 'Shovel Test');
             questions = [...commonQuestions, ...shovelTestQuestions];
             speak("Starting shovel test form.");
         } else if (answerLower.includes('unit') || answerLower.includes('level') || answerLower.includes('record')) {
-            formData.formType = 'Unit Level Record';
+            // FIXED: Actually fill the form type field
+            fillField('formType', 'Unit Level Record');
             questions = [...commonQuestions, ...unitLevelQuestions];
             speak("Starting unit level record form.");
         } else {
@@ -377,6 +387,10 @@ resetBtn.addEventListener('click', () => {
             field.value = '';
             field.classList.remove('filled');
         });
+        
+        // FIXED: Hide both form sections
+        document.getElementById('shovelTestSection').style.display = 'none';
+        document.getElementById('unitLevelSection').style.display = 'none';
         
         startBtn.disabled = false;
         stopBtn.disabled = true;
@@ -504,4 +518,3 @@ displaySavedForms();
 
 // Update initial progress text
 progressDiv.textContent = "Selecting form type...";
-
