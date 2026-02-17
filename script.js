@@ -36,7 +36,7 @@ const questions = [
         field: "coordinates"
     },
     {
-        text: "How would you assess the condition? For example, excellent, good, fair, or poor.",
+        text: "How would you assess the condition?",
         field: "condition"
     },
     {
