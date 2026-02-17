@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archaeology Field Form - Voice Entry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏺 Archaeology Field Form</h1>
+            <p class="subtitle">Hands-Free Voice Data Entry</p>
+        </header>
+
+        <div class="status-bar">
+            <div id="status" class="status">Ready to start</div>
+            <div id="progress" class="progress">Question 0 of 8</div>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">Start Voice Form</button>
+            <button id="stopBtn" class="btn btn-secondary" disabled>Stop</button>
+            <button id="resetBtn" class="btn btn-tertiary">Reset Form</button>
+        </div>
+
+        <div class="form-section">
+            <h2>Current Question:</h2>
+            <div id="currentQuestion" class="current-question">
+                Press "Start Voice Form" to begin
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Form Data:</h2>
+            <form id="archaeologyForm">
+                <div class="form-group">
+                    <label>Site Name/ID:</label>
+                    <input type="text" id="siteName" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Artifact Type:</label>
+                    <input type="text" id="artifactType" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Material Composition:</label>
+                    <input type="text" id="material" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Depth (cm):</label>
+                    <input type="text" id="depth" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>GPS Coordinates:</label>
+                    <input type="text" id="coordinates" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Condition Assessment:</label>
+                    <input type="text" id="condition" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Associated Finds:</label>
+                    <input type="text" id="associatedFinds" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Notes:</label>
+                    <textarea id="notes" rows="3" readonly></textarea>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <button id="saveBtn" class="btn btn-success" disabled>Save Completed Form</button>
+            <div id="savedForms" class="saved-forms"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
