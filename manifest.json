@@ -1,6 +1,6 @@
 {
   "name": "Archaeology Field Form",
-  "short_name": "Arch Form",
+  "short_name": "Archaeology Form",
   "description": "Hands-free voice data entry for archaeological field work",
   "start_url": "./index.html",
   "display": "standalone",
